@@ -13,6 +13,8 @@ vector<int> numeros;
     numeros.size();
 
     do{
+            
+            
             cout << "Digite um numero: ";
             cin >> x;
 
