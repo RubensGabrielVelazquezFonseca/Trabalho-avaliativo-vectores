@@ -23,10 +23,7 @@ vector<int> numeros;
 
     }while(continuar == "s");
 
-
         cout << "Saiu" << endl;
-        
-      
         
         
         
@@ -56,7 +53,8 @@ vector<int> numeros;
             cout << "Pressione enter para continuar" << endl;
             cin.get();
            
-            break;
+            break; 
+            
             
             case 2:
             break;
