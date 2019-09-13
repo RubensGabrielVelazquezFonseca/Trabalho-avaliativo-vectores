@@ -23,7 +23,10 @@ vector<int> numeros;
 
     }while(continuar == "s");
 
+
         cout << "Saiu" << endl;
+        
+      
         
         
         
