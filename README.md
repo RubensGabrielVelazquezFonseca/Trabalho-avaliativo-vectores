@@ -1,4 +1,4 @@
-#include <vector>
+  #include <vector>
 #include <iostream>
 
 using namespace std;
@@ -53,8 +53,7 @@ vector<int> numeros;
             cout << "Pressione enter para continuar" << endl;
             cin.get();
            
-            break; 
-            
+            break;
             
             case 2:
             break;
@@ -80,4 +79,3 @@ vector<int> numeros;
  
  return 0;
 }
- 
