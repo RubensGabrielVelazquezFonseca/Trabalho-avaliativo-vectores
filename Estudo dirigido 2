@@ -1,0 +1,416 @@
+Teoria
+1. Uma Lista também pode receber outros nomes. Quais são os
+outros nomes que em nossa disciplina também podem ser usados
+como sinônimos de listas?
+R:Vetor,Matriz array etc.
+2. Qual o objetivos e quais as vantagens de se usar Listas em
+detrimento do uso de variáveis comuns?
+R:A lista consegue segurar uma quantidade a escolha do usuário
+facilitando o uso diferentemente das variáveis comuns que so
+seguram um valor lógico.
+3. Complete as lacunas:
+a. Toda lista possui um ____ número que se inicia em 0;
+b. Uma lista nativa em cpp tem um tamanho ________;
+c. Uma lista usando a classe Vector tem como principal
+característica ter tamanho ______________________;
+a.Sequência de
+b.A escolha
+c.Dinâmico
+4. O que significa Iterar sobre uma lista?
+R:Iterar significa percorrer todos ou alguns itens de uma lista de
+forma sistemática
+5. Quais as formas de iterar uma lista?
+R:Normalmente usamos a estrutura de repetição FOR,WHILE OU
+DO WHILE para isso.
+6. O que são funções?
+R:Funções são blocos de código que podem realizar qualquer tipo
+de tarefa
+7. Quais as vantagens de se usar funções?
+R:As funcoes contem normalmente uma linha de cogidos, entao
+você nao precisa sempre escrever esse código denovo e denovo
+ex: você fez um código x em uma funçao quando você for usar
+esse código x você nao precisa reescrever esse código precisa
+apenas chamar/declarar a funcao que contem o código x.
+8. O que significa “declarar” e “chamar” uma função? Na sua
+opinião porque existe essa fluxo de funcionamento?
+R:Declarar a funcao é criar o código que ne-la sera contida ex:
+você declarou o código x na funcao x. Apos declarar a funcao você
+deve chama-la a hora que precisar que ela executará o código
+ne-la declarada nada mais nada menos.
+9. O que significa dizer que uma função possui parâmetros?
+R:Uma função pode receber valores que serão usados por
+instruções da função, esses valores recebem o nome de
+parâmetros da função, esses valores devem estar definidos na
+estrutura da função e devem ser informados na chamada da
+função.
+10. O que é o retorno de uma função?
+R:Retorno é o valor que uma funçao “retorna” ela pode retornar um
+valor inteiro (int main(){}) ou pode nao retornar valor(void main(){})
+11. Na sua opinião, o uso de funções poderia ser usado no Estudo
+dirigido 1? Quais seriam as vantagens?
+R:Sim,a vantagem e de nao precisar reescrever algum código
+varias vezes , ex: foi o código de soma que foi usado em varios
+casos, se você fizer uma funcao para o código de soma você
+precisa apenas declarar a funcao soma quando precisar somar.
+Algoritmos de Repetição
+1. Ao executarmos o algoritmo abaixo,o que será impresso na tela?
+for(int i = 3 ; i < 12 ; i = i + 3 ){
+ cout<<i;
+}
+RESPOSTA: 369
+2. Ao executarmos o algoritmo abaixo,o que será impresso na tela?
+int foo = 1;
+while(foo <= 5){
+ cout << foo;
+ foo++;
+}
+RESPOSTA:12345
+Listas
+1. Ao executarmos o algoritmo abaixo,o que será impresso na tela?
+int lista [5] = [1,2,3,4,5];
+for (int j = 0 ; j < 5 ; j++ ){
+ cout << lista [j] ;
+}
+RESPOSTA:12345
+2. Ao executarmos o algoritmo abaixo,o que será impresso na tela?
+int lista[5] = [7,14,99,3,5];
+int x = lista[0];
+for (int k = 1 ; k < 5 ; k++){
+ if ( lista[k] > x){
+ x = lista [k];
+ }
+}
+RESPOSTA:99
+3. Ao executarmos o algoritmo abaixo,o que será impresso na tela?
+vector<string>cidades={“Florianopolis”,”Curitiba”,”Medianeira”,”Joinville”}
+sort(cidades.begin(),cidades.end());
+for(int l = 0 ; l < cidades.size() ; l++){
+ cout<<cidades[l];
+}
+
+
+
+RESPOSTA:FlorianopolisCuritibaMedianeiraJoinville
+
+
+
+
+
+PRATICAS
+
+
+1)
+
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int NUMEROS(){
+for(int i = 1 ; i <= 100 ; i++)
+{
+cout<< i<<endl;
+}
+}
+
+int main(){
+string resp;
+cout<<"Deseja chamar a funçao?('s' ou  'n')"<<endl;
+cin>>resp;
+cout<<endl;
+if(resp=="s")
+{NUMEROS();}
+if(resp=="n")
+{cout<<"ok";}
+
+return 0;
+}
+
+
+2)
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int SOMA(int x, int y){
+int soma;
+soma= x+y;
+cout<<" SOMA = ";
+cout<<soma<<endl;
+}
+
+int main(){
+string resp ;
+cout<<"Deseja executar a funcao?(s ou n)"<<endl;
+cin>>resp;
+cout<<endl;
+if(resp=="s")
+{
+int xx,yy;
+cout<<"Digite o primeiro parametro"<<endl;
+cin>>xx;
+cout<<"Digite o segundo parametro"<<endl;
+cin>>yy;
+SOMA(xx,yy);
+}
+if(resp=="n")
+{
+cout<<"ok";
+}
+
+return 0;
+}
+
+
+
+3)
+
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int SOMA2(int x, int y,int z){
+int soma;
+soma= x+y+z;
+cout<<" SOMA2 = ";
+cout<<soma<<endl;
+}
+
+int main(){
+string resp ;
+cout<<"Deseja executar a funcao?(s ou n)"<<endl;
+cin>>resp;
+cout<<endl;
+if(resp=="s")
+{
+int xx,yy,zz;
+cout<<"Digite o primeiro parametro"<<endl;
+cin>>xx;
+
+
+
+
+4)
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int CONVERTE_MOEDA(double valor,string moeda){
+cout<<fixed<<setprecision(2);
+double convertido;
+if(moeda == "dolar")
+{
+convertido = valor *4.16;
+}
+if(moeda == "euro")
+{
+convertido = valor *4.55;
+}
+cout<<convertido;
+}
+int main(){
+string moeda;
+int valor;
+cout<<"Digite o valor em reais"<<endl;
+cin>>valor;
+cout<<"Digite a moeda que quer que converta para(dolar ou euro)"<<endl;
+cin>>moeda;
+CONVERTE_MOEDA(valor,moeda);
+return 0;
+}
+
+
+
+5)
+
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int PALINDROMO(){
+string palavra,inversa;
+cout<<"Digite a palavra"<<endl;
+cin>>palavra;
+inversa = palavra;
+reverse(palavra.begin(),palavra.end());
+
+if(palavra == inversa)
+{
+cout<<"verdadeiro"<<endl;
+}
+if(palavra!=inversa)
+{
+cout<<"falso"<<endl;
+}
+}
+int main(){
+string resp;
+
+
+
+
+6)
+
+
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main(){
+setlocale(LC_ALL,"PORTUGUESE");
+string resposta[5];
+int participacao = 0;
+cout<<"Telefonou para a vítima?(s ou n)"<<endl;
+cin>>resposta[0];
+cout<<"Esteve no local do crime?(s ou n)"<<endl;
+cin>>resposta[1];
+cout<<"Mora perto da vítima?(s ou n)"<<endl;
+cin>>resposta[2];
+cout<<"Devia para a vítima?(s ou n)"<<endl;
+cin>>resposta[3];
+cout<<"Já trabalhou com a vítima?(s ou n)"<<endl;
+cin>>resposta[4];
+
+for(int i = 0; i <5; i++)
+{
+if(resposta[i]== "s")
+{
+participacao = participacao +1;
+}
+}
+cout<<endl;
+
+if(participacao<2)
+{
+cout<<"Inocente";
+}
+if(participacao==2)
+{
+cout<<"Suspeito";
+}
+if(participacao==3||participacao==4)
+{
+cout<<"Cumplice";
+}
+if(participacao==5)
+{
+cout<<"Assasino";
+}
+return 0;
+}
+
+
+
+7)
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include<iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+char nome[21],nome2;
+int  i,j;
+puts("Digite a mensagem");
+gets(nome);
+for(i = 0; i < 21; i++)
+{
+nome[i] = tolower(nome[i]);
+}
+cout<<"Minusculo = "<<nome;
+return 0;
+}
+
+
+
+
+8)
+
+
+
+
+#include<iostream>
+#include<locale.h>
+#include<iomanip>
+#include<math.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main(){
+setlocale(LC_ALL,"PORTUGUESE");
+cout<<fixed<<setprecision(2);
+double a,b,c;
+double delta;
+double x1;
+double x2;
+cout<<"Digite o valor de A"<<endl;
+cin>>a;
+cout<<"Digite o valor de B"<<endl;
+cin>>b;
+cout<<"Digite o valor de C"<<endl;
+cin>>c;
+
+delta = (b*b) - (4*a*c);
+
+x1= ((-b) + sqrt(delta))/(2*a);
+x2= ((-b) - sqrt(delta))/(2*a);
+
+if(delta<0)
+{
+cout<<"não é possível realizar essa operação pois não existe raiz quadrada de número negativo"<<endl;
+}
+
+if(delta==0)
+{
+cout<< "a função possui raiz dupla"<<endl;
+cout<<x1<<endl;
+
+}
+else{
+cout<<x1<<endl;
+cout<<x2<<endl;
+}
+
+
+return 0;
+}
+
