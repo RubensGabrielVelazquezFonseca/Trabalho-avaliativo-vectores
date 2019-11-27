@@ -1,0 +1,50 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main () {
+string resposta,tarefa;
+int aa,num;
+vector<string>tarefas;
+do{
+    cout<<"Digite a tarefa que deseja guardar"<<endl;
+    getline(cin,tarefa);
+    tarefas.push_back(tarefa);
+    cout<<"Voce quer adicionar uma nova tarefa?(s ou n)"<<endl;
+    cin>>resposta;
+    cin.ignore(1,'\n');
+    }while(resposta=="s");
+    sort(tarefas.begin(),tarefas.end());
+    cout<<"Sua lista ficou organizada assim:"<<endl;
+    for(aa= 0;aa<tarefas.size();aa++)
+    {
+    cout<<"Posicao("<<aa<<"):";
+    cout<<tarefas[aa];
+    cout<<endl;
+    }
+
+    cout<<"Voce quer apagar algo de sua lista sua lista?(s ou n)"<<endl;
+    cin>>resposta;
+if(resposta == "s")
+{
+cout<<"Digite a posicao da tarefa que deseja excluir"<<endl;
+cin>>num;
+tarefas.erase(tarefas.begin()+num);
+}
+ofstream arquivo("tarefas.txt");
+for(aa=0;aa<tarefas.size();aa++)
+{
+arquivo<<tarefas[aa];
+}
+    cout<<"Sua lista ficou organizada assim:"<<endl;
+    for(aa= 0;aa<tarefas.size();aa++)
+    {
+    cout<<"Posicao("<<aa<<"):";
+    cout<<tarefas[aa];
+    cout<<endl;
+    }
+arquivo.close();
+return 0;
+}
